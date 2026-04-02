@@ -4,28 +4,17 @@
 
 process.title = 'OhTask';
 
-const Aidejs = require("@aidejs/core");
-const Tools = require("@aidejs/tools");
+// 启动配置
+if (process.argv[2] === "config") {
+    require("./config.js")();
+}
 
-const { logform } = require("oipage/nodejs/logform/index.js");
+// 服务器模式
+else if (process.argv[2] === "serve") {
+    require("./serve.js")();
+}
 
-Aidejs.use(Tools);
-
-let agent = new Aidejs({
-    model: "qwen3"
-});
-
-agent.task(void 0, function (message) {
-    process.stdout.write(message);
-}, function () {
-    return new Promise((resolve) => {
-
-        logform([{
-            type: "input",
-            label: "请输入任务："
-        }]).then(result => {
-            resolve(result[0]);
-        });
-
-    });
-});
+// 命令行模式
+else {
+    require("./cli.js")();
+}

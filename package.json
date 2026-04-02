@@ -34,9 +34,9 @@
   },
   "homepage": "https://github.com/zxl20070701/OhTask#readme",
   "dependencies": {
-    "@aidejs/core": "^0.1.0-alpha.0",
-    "@aidejs/tools": "^0.1.0-alpha.0",
-    "@oipage/cli": "^0.2.0-alpha.1",
+    "@aidejs/core": "^0.1.0-alpha.1",
+    "@aidejs/tools": "^0.1.0-alpha.1",
+    "@oipage/cli": "^0.2.0-alpha.2",
     "oipage": "^2.0.0"
   }
 }
